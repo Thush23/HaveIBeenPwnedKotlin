@@ -1,7 +1,7 @@
-package com.example.a080319.data
+package com.example.HaveIBeenPawnedKotlin.data
 
-import com.example.a080319.net.HaveIBeenPawnedService
-import io.reactivex.Observable
+import com.example.HaveIBeenPawnedKotlin.BASE_URL
+import com.example.HaveIBeenPawnedKotlin.net.HaveIBeenPawnedService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 //IMPLEMENTING THE DATASOURCE INTERFACE TO GET THE RESULT..WORKING BY LAZY(NEED TO LOOK INTO IT)
 
-class RemoteDataSource : DataSource{
+class RemoteDataSource : DataSource {
 
     private val haveIBeenPawnedService: HaveIBeenPawnedService by lazy {
         val okHttpClient = OkHttpClient.Builder()
